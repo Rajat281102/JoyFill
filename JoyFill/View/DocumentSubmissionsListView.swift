@@ -33,7 +33,7 @@ struct DocumentSubmissionsListView: View {
                 
                 ForEach(documentsViewModel.submissions) { submission in
                     NavigationLink {
-                        FormView(identifier: submission.identifier, userAccessToken: documentsViewModel.userAccessToken)
+                        FormView(identifier: submission.identifier)
                     } label: {
                         HStack {
                             Image(systemName: "doc")
