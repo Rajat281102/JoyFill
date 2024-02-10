@@ -13,6 +13,17 @@ struct FormView: View {
     
     var body: some View {
             VStack{
+                if let fields = data?.fields  {
+                    ForEach(fields) { joyDocField in
+                        switch joyDocField.type {
+                            
+                            
+                        default:
+                            Text("Hllo")
+                        }
+                    }
+                }
+                Text("Data not ")
                 
             }
             .onAppear{

@@ -57,7 +57,7 @@ struct JoyDoc: Codable {
 }
 
 // MARK: - JoyDocField
-struct JoyDocField: Codable {
+struct JoyDocField: Codable, Identifiable {
     var type, id, identifier, title: String?
     var value: ValueUnion?
     let fieldRequired: Bool?
