@@ -12,60 +12,65 @@ struct FormView: View {
     @State var data: JoyDoc?
     
     var body: some View {
-        VStack{
-            if let fields = data?.fields  {
-                ForEach(fields) { joyDocField in
-                    switch joyDocField.type {
-                    case FieldTypes.text:
-                        DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
-                    case FieldTypes.multiSelect:
-                        Text("")
-                    case FieldTypes.dropdown:
-                        Text("")
-                    case FieldTypes.textarea:
-                        Text("")
-                    case FieldTypes.date:
-                        Text("")
-                    case FieldTypes.signature:
-                        Text("")
-                    case FieldTypes.block:
-                        DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
-                    case FieldTypes.number:
-                        Text("")
-                    case FieldTypes.chart:
-                        Text("")
-                    case FieldTypes.richText:
-                        Text("")
-                    case FieldTypes.table:
-                        Text("")
-                    case FieldTypes.image:
-                        Text("")
-                    default:
-                        Text("Data no Available")
+        ScrollView {
+            VStack {
+                Text("Form View")
+                    .font(.title.bold())
+                
+                if let fields = data?.fields  {
+                    ForEach(fields) { joyDocField in
+                        switch joyDocField.type {
+                        case FieldTypes.text:
+                            DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
+                        case FieldTypes.multiSelect:
+                            Text("")
+                        case FieldTypes.dropdown:
+                            DropdownView()
+                        case FieldTypes.textarea:
+                            MultiLineTextView()
+                        case FieldTypes.date:
+                            DateTimeView()
+                        case FieldTypes.signature:
+                            Text("")
+                        case FieldTypes.block:
+                            DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
+                        case FieldTypes.number:
+                            NumberView()
+                        case FieldTypes.chart:
+                            Text("")
+                        case FieldTypes.richText:
+                            Text("")
+                        case FieldTypes.table:
+                            Text("")
+                        case FieldTypes.image:
+                            ImageView()
+                        default:
+                            Text("Data no Available")
+                        }
                     }
                 }
             }
-        }
-        .onAppear{
-            APIService().fetchJoyDoc(identifier: identifier) { result in
-                switch result {
-                case .success(let data):
-                    do {
-                        let joyDocStruct = try JSONDecoder().decode(JoyDoc.self, from: data)
-                        
-                        // It will prevent tasks to perform on main thread
-                        DispatchQueue.main.async {
-                            self.data = joyDocStruct
-                            pageIndex = 0
-                            fetchDataFromJoyDoc()
+            .onAppear{
+                APIService().fetchJoyDoc(identifier: identifier) { result in
+                    switch result {
+                    case .success(let data):
+                        do {
+                            let joyDocStruct = try JSONDecoder().decode(JoyDoc.self, from: data)
+                            
+                            // It will prevent tasks to perform on main thread
+                            DispatchQueue.main.async {
+                                self.data = joyDocStruct
+                                pageIndex = 0
+                                fetchDataFromJoyDoc()
+                            }
+                        } catch {
+                            print("Error decoding JSON: \(error)")
                         }
-                    } catch {
-                        print("Error decoding JSON: \(error)")
+                    case .failure(let error):
+                        print("error: \(error.localizedDescription)")
                     }
-                case .failure(let error):
-                    print("error: \(error.localizedDescription)")
+                    
                 }
-                
             }
         }
     }

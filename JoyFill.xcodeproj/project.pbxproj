@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AE60262B77B397001E7B82 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60252B77B397001E7B82 /* ImageView.swift */; };
+		04AE60282B77B7B0001E7B82 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60272B77B7B0001E7B82 /* TextView.swift */; };
+		04AE602A2B77B820001E7B82 /* MultiLineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60292B77B820001E7B82 /* MultiLineTextView.swift */; };
+		04AE602C2B77B848001E7B82 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE602B2B77B848001E7B82 /* NumberView.swift */; };
+		04AE602E2B77B983001E7B82 /* DateTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE602D2B77B983001E7B82 /* DateTimeView.swift */; };
+		04AE60302B77B9BB001E7B82 /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE602F2B77B9BB001E7B82 /* DropdownView.swift */; };
+		04AE60322B77B9D2001E7B82 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60312B77B9D2001E7B82 /* MultiSelectionView.swift */; };
+		04AE60342B77BA04001E7B82 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60332B77BA04001E7B82 /* SelectorView.swift */; };
+		04AE60362B77BA2F001E7B82 /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60352B77BA2F001E7B82 /* SignatureView.swift */; };
+		04AE60382B77BA45001E7B82 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60372B77BA45001E7B82 /* TableView.swift */; };
+		04AE603A2B77BA68001E7B82 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60392B77BA68001E7B82 /* ChartView.swift */; };
 		13EB61232B7761EA009815DE /* JoyFillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61222B7761EA009815DE /* JoyFillApp.swift */; };
 		13EB61272B7761EC009815DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EB61262B7761EC009815DE /* Assets.xcassets */; };
 		13EB612A2B7761EC009815DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EB61292B7761EC009815DE /* Preview Assets.xcassets */; };
@@ -26,6 +37,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04AE60252B77B397001E7B82 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		04AE60272B77B7B0001E7B82 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		04AE60292B77B820001E7B82 /* MultiLineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLineTextView.swift; sourceTree = "<group>"; };
+		04AE602B2B77B848001E7B82 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		04AE602D2B77B983001E7B82 /* DateTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeView.swift; sourceTree = "<group>"; };
+		04AE602F2B77B9BB001E7B82 /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
+		04AE60312B77B9D2001E7B82 /* MultiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
+		04AE60332B77BA04001E7B82 /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
+		04AE60352B77BA2F001E7B82 /* SignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureView.swift; sourceTree = "<group>"; };
+		04AE60372B77BA45001E7B82 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		04AE60392B77BA68001E7B82 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		13EB611F2B7761EA009815DE /* JoyFill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoyFill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EB61222B7761EA009815DE /* JoyFillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoyFillApp.swift; sourceTree = "<group>"; };
 		13EB61262B7761EC009815DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AE603B2B77BA94001E7B82 /* All Fields Template */ = {
+			isa = PBXGroup;
+			children = (
+				04AE60252B77B397001E7B82 /* ImageView.swift */,
+				13EB61552B779BEE009815DE /* DisplayTextView.swift */,
+				04AE60272B77B7B0001E7B82 /* TextView.swift */,
+				04AE60292B77B820001E7B82 /* MultiLineTextView.swift */,
+				04AE602B2B77B848001E7B82 /* NumberView.swift */,
+				04AE602D2B77B983001E7B82 /* DateTimeView.swift */,
+				04AE602F2B77B9BB001E7B82 /* DropdownView.swift */,
+				04AE60312B77B9D2001E7B82 /* MultiSelectionView.swift */,
+				04AE60332B77BA04001E7B82 /* SelectorView.swift */,
+				04AE60352B77BA2F001E7B82 /* SignatureView.swift */,
+				04AE60372B77BA45001E7B82 /* TableView.swift */,
+				04AE60392B77BA68001E7B82 /* ChartView.swift */,
+			);
+			path = "All Fields Template";
+			sourceTree = "<group>";
+		};
 		13EB61162B7761EA009815DE = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +144,7 @@
 				13EB613B2B7773BC009815DE /* FormView.swift */,
 				13EB613C2B7773BC009815DE /* DocumentListView.swift */,
 				13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */,
-				13EB61552B779BEE009815DE /* DisplayTextView.swift */,
+				04AE603B2B77BA94001E7B82 /* All Fields Template */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,18 +244,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EB613F2B7773BC009815DE /* FormView.swift in Sources */,
+				04AE60302B77B9BB001E7B82 /* DropdownView.swift in Sources */,
 				13EB61472B77752D009815DE /* DocumentModel.swift in Sources */,
 				13EB61502B777750009815DE /* ApiService.swift in Sources */,
 				13EB61412B7773BC009815DE /* DocumentSubmissionsListView.swift in Sources */,
 				13EB61542B777780009815DE /* JoyDocViewModel.swift in Sources */,
+				04AE602A2B77B820001E7B82 /* MultiLineTextView.swift in Sources */,
 				13EB61232B7761EA009815DE /* JoyFillApp.swift in Sources */,
+				04AE60342B77BA04001E7B82 /* SelectorView.swift in Sources */,
 				13EB614B2B777566009815DE /* API.swift in Sources */,
 				13EB61522B777773009815DE /* DocumentsViewModel.swift in Sources */,
+				04AE602E2B77B983001E7B82 /* DateTimeView.swift in Sources */,
+				04AE60382B77BA45001E7B82 /* TableView.swift in Sources */,
+				04AE60322B77B9D2001E7B82 /* MultiSelectionView.swift in Sources */,
 				13EB61372B777073009815DE /* JoyDoc.swift in Sources */,
+				04AE60282B77B7B0001E7B82 /* TextView.swift in Sources */,
+				04AE602C2B77B848001E7B82 /* NumberView.swift in Sources */,
 				13EB61392B7770D6009815DE /* JSONNull .swift in Sources */,
 				13EB61562B779BEE009815DE /* DisplayTextView.swift in Sources */,
 				13EB61402B7773BC009815DE /* DocumentListView.swift in Sources */,
+				04AE60362B77BA2F001E7B82 /* SignatureView.swift in Sources */,
+				04AE60262B77B397001E7B82 /* ImageView.swift in Sources */,
 				13EB61492B77755B009815DE /* Constants.swift in Sources */,
+				04AE603A2B77BA68001E7B82 /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
