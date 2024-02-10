@@ -11,7 +11,7 @@ import SwiftUI
 struct JoyFillApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DocumentListView()
         }
     }
 }
