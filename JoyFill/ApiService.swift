@@ -17,7 +17,7 @@ enum JoyfillAPI {
         switch self {
         case .document(identifier: let identifier):
             if let identifier = identifier {
-                return URL(string: "\(Constants.baseURL)\(identifier)")!
+                return URL(string: "\(Constants.baseURL)/\(identifier)")!
             }
             return URL(string: "\(Constants.baseURL)?&page=1&limit=25")!
         case .template(identifier: let identifier):
