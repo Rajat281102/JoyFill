@@ -17,7 +17,7 @@ struct FormView: View {
                 ForEach(fields) { joyDocField in
                     switch joyDocField.type {
                     case FieldTypes.text:
-                        Text("")
+                        DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
                     case FieldTypes.multiSelect:
                         Text("")
                     case FieldTypes.dropdown:
@@ -29,7 +29,7 @@ struct FormView: View {
                     case FieldTypes.signature:
                         Text("")
                     case FieldTypes.block:
-                        Text("")
+                        DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
                     case FieldTypes.number:
                         Text("")
                     case FieldTypes.chart:
@@ -41,11 +41,10 @@ struct FormView: View {
                     case FieldTypes.image:
                         Text("")
                     default:
-                        Text("Hllo")
+                        Text("Data no Available")
                     }
                 }
             }
-            Text("Data not ")
         }
         .onAppear{
             APIService().fetchJoyDoc(identifier: identifier) { result in
@@ -90,3 +89,16 @@ struct FieldTypes {
     static let table = "table"
     static let image = "image"
 }
+
+fileprivate extension ValueUnion {
+    var textabc: String? {
+        switch self {
+        case .string(let string):
+            return string
+        default:
+            return nil
+        }
+    }
+    
+}
+

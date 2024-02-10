@@ -14,5 +14,5 @@ struct Constants {
     static let baseURL = "https://api-joy.joyfill.io/v1/documents"
     
     // See https://docs.joyfill.io/docs/authentication#user-access-tokens
-    static let userAccessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbiI6IjY1YmY0ZGY4ZDQyOTJhZmM0OTQ2ZDZiMSJ9.DH6ywgQIbECo65WFp214e5mQQMZ8WE_hZAOI1HEeaH8"
+    static let userAccessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbiI6IjY1Yzc2NDI5ZGQ5NjIwNmM3ZTA3ZWQ5YiJ9.OhI3aY3na-3f1WWND8y9zU8xXo4R0SIUSR2BLB3vbsk"
 }

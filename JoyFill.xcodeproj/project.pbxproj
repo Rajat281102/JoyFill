@@ -22,6 +22,7 @@
 		13EB61502B777750009815DE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB614F2B777750009815DE /* ApiService.swift */; };
 		13EB61522B777773009815DE /* DocumentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61512B777772009815DE /* DocumentsViewModel.swift */; };
 		13EB61542B777780009815DE /* JoyDocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61532B777780009815DE /* JoyDocViewModel.swift */; };
+		13EB61562B779BEE009815DE /* DisplayTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61552B779BEE009815DE /* DisplayTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		13EB614F2B777750009815DE /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		13EB61512B777772009815DE /* DocumentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsViewModel.swift; sourceTree = "<group>"; };
 		13EB61532B777780009815DE /* JoyDocViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoyDocViewModel.swift; path = ../Model/JoyDocViewModel.swift; sourceTree = "<group>"; };
+		13EB61552B779BEE009815DE /* DisplayTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				13EB613B2B7773BC009815DE /* FormView.swift */,
 				13EB613C2B7773BC009815DE /* DocumentListView.swift */,
 				13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */,
+				13EB61552B779BEE009815DE /* DisplayTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				13EB61522B777773009815DE /* DocumentsViewModel.swift in Sources */,
 				13EB61372B777073009815DE /* JoyDoc.swift in Sources */,
 				13EB61392B7770D6009815DE /* JSONNull .swift in Sources */,
+				13EB61562B779BEE009815DE /* DisplayTextView.swift in Sources */,
 				13EB61402B7773BC009815DE /* DocumentListView.swift in Sources */,
 				13EB61492B77755B009815DE /* Constants.swift in Sources */,
 			);
