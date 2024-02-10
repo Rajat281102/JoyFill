@@ -12,7 +12,7 @@
 		13EB612A2B7761EC009815DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EB61292B7761EC009815DE /* Preview Assets.xcassets */; };
 		13EB61372B777073009815DE /* JoyDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61362B777073009815DE /* JoyDoc.swift */; };
 		13EB61392B7770D6009815DE /* JSONNull .swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61382B7770D6009815DE /* JSONNull .swift */; };
-		13EB613F2B7773BC009815DE /* DocumentForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613B2B7773BC009815DE /* DocumentForm.swift */; };
+		13EB613F2B7773BC009815DE /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613B2B7773BC009815DE /* FormView.swift */; };
 		13EB61402B7773BC009815DE /* DocumentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613C2B7773BC009815DE /* DocumentListView.swift */; };
 		13EB61412B7773BC009815DE /* DocumentSubmissionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */; };
 		13EB61472B77752D009815DE /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61462B77752D009815DE /* DocumentModel.swift */; };
@@ -31,7 +31,7 @@
 		13EB61292B7761EC009815DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13EB61362B777073009815DE /* JoyDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyDoc.swift; sourceTree = "<group>"; };
 		13EB61382B7770D6009815DE /* JSONNull .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONNull .swift"; sourceTree = "<group>"; };
-		13EB613B2B7773BC009815DE /* DocumentForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentForm.swift; sourceTree = "<group>"; };
+		13EB613B2B7773BC009815DE /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		13EB613C2B7773BC009815DE /* DocumentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentListView.swift; sourceTree = "<group>"; };
 		13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentSubmissionsListView.swift; sourceTree = "<group>"; };
 		13EB61462B77752D009815DE /* DocumentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		13EB61332B77702A009815DE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				13EB613B2B7773BC009815DE /* DocumentForm.swift */,
+				13EB613B2B7773BC009815DE /* FormView.swift */,
 				13EB613C2B7773BC009815DE /* DocumentListView.swift */,
 				13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */,
 			);
@@ -199,7 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13EB613F2B7773BC009815DE /* DocumentForm.swift in Sources */,
+				13EB613F2B7773BC009815DE /* FormView.swift in Sources */,
 				13EB61472B77752D009815DE /* DocumentModel.swift in Sources */,
 				13EB61502B777750009815DE /* ApiService.swift in Sources */,
 				13EB61412B7773BC009815DE /* DocumentSubmissionsListView.swift in Sources */,
