@@ -77,7 +77,7 @@ class DocumentsViewModel: ObservableObject {
     }
     
     func createDocumentSubmission(identifier: String, completion: @escaping ((Any) -> Void)) {
-        APIService.createDocumentSubmission(joyDocModel: joyDocModel,identifier: identifier, userAccessToken: userAccessToken) { result in
+        apiService.createDocumentSubmission(identifier: identifier) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let jsonRes):

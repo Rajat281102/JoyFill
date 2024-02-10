@@ -4,10 +4,16 @@ import Combine
 class JoyDocViewModel: ObservableObject {
     @Published var joyDocLoading = false
     @Published var joyDocError = ""
+    let apiService: APIService
+    init(joyDocLoading: Bool = false, joyDocError: String = "") {
+        self.joyDocLoading = joyDocLoading
+        self.joyDocError = joyDocError
+        self.apiService = APIService()
+    }
     
     // Pulls in the JoyDoc raw JSON data for adding to our ViewController
     func fetchJoyDoc(identifier: String, userAccessToken: String, completion: @escaping ((Any) -> Void)) {
-        APIService.fetchJoyDoc(identifier: identifier, userAccessToken: userAccessToken) { result in
+        apiService.fetchJoyDoc(identifier: identifier) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):

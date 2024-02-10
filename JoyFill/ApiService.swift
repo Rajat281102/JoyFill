@@ -17,7 +17,7 @@ enum JoyfillAPI {
         switch self {
         case .document(identifier: let identifier):
             if let identifier = identifier {
-                return URL(string: "\(Constants.baseURL)?document=\(identifier)&page=1&limit=25")!
+                return URL(string: "\(Constants.baseURL)\(identifier)")!
             }
             return URL(string: "\(Constants.baseURL)?&page=1&limit=25")!
         case .template(identifier: let identifier):
@@ -31,12 +31,10 @@ enum JoyfillAPI {
 }
 
 class APIService {
-    private var JoyDocModel = JoyDocViewModel()
     private let accessToken: String
     
-    init(accessToken: String, JoyDocModel: JoyDocViewModel = JoyDocViewModel()) {
+    init(accessToken: String = Constants.userAccessToken) {
         self.accessToken = accessToken
-        self.JoyDocModel = JoyDocModel
     }
     
     private func urlRequest(type: JoyfillAPI) -> URLRequest {
@@ -88,9 +86,9 @@ class APIService {
         }
     }
     
-    static func createDocumentSubmission(joyDocModel: JoyDocViewModel,identifier: String, userAccessToken: String, completion: @escaping (Result<Any, Error>) -> Void) {
+     func createDocumentSubmission(identifier: String, completion: @escaping (Result<Any, Error>) -> Void) {
             
-        joyDocModel.fetchJoyDoc(identifier: identifier, userAccessToken: userAccessToken) { joyDocJSON in
+         self.fetchJoyDoc(identifier: identifier) { [self] joyDocJSON in
                 
                 guard let url = URL(string: "\(Constants.baseURL)") else {
                     completion(.failure(APIError.invalidURL))
@@ -116,7 +114,7 @@ class APIService {
                 
                 request.httpBody = jsonData
                 request.httpMethod = "POST"
-                request.setValue("Bearer \(userAccessToken)", forHTTPHeaderField: "Authorization")
+                request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 
                 URLSession.shared.dataTask(with: request) { data, response, error in
@@ -134,29 +132,20 @@ class APIService {
             }
         }
     
-    static func fetchJoyDoc(identifier: String, userAccessToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
-            guard let url = URL(string: "\(Constants.baseURL)/\(identifier)") else {
-                completion(.failure(APIError.invalidURL))
-                return
-            }
-            
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            request.setValue("Bearer \(userAccessToken)", forHTTPHeaderField: "Authorization")
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                if let data = data, error == nil {
-                    DispatchQueue.main.async {
-                        completion(.success(data))
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        completion(.failure(error ?? APIError.unknownError))
-                    }
+    func fetchJoyDoc(identifier: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let request = urlRequest(type: .document(identifier: identifier))
+        makeAPICall(with: request) { data, response, error in
+            if let data = data, error == nil {
+                DispatchQueue.main.async {
+                    completion(.success(data))
                 }
-            }.resume()
+            } else {
+                DispatchQueue.main.async {
+                    completion(.failure(error ?? APIError.unknownError))
+                }
+            }
         }
+    }
     
     static func updateDocumentChangelogs(identifier: String, userAccessToken: String, docChangeLogs: Any, completion: @escaping (Result<Any, Error>) -> Void) {
         do {
