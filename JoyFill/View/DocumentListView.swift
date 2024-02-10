@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DocumentListView: View {
-    @ObservedObject var documentsViewModel = DocumentViewModel()
+    @ObservedObject var documentsViewModel = DocumentsViewModel()
     
     var body: some View {
         NavigationView {
@@ -17,7 +17,7 @@ struct DocumentListView: View {
                 List {
                     ForEach(documentsViewModel.documents) { document in
                         NavigationLink {
-                            DocumentSubmissionsList(identifier: document.identifier, name: document.name)
+                            DocumentSubmissionsListView(identifier: document.identifier, name: document.name)
                         } label: {
                             VStack(alignment: .leading) {
                                 HStack {
@@ -31,7 +31,7 @@ struct DocumentListView: View {
                 }
             }
             .onAppear() {
-                documentsViewModel.fetchTemplateList()
+                documentsViewModel.fetchDocuments()
                 print("view present")
             }
         }

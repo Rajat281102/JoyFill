@@ -1,5 +1,5 @@
 //
-//  DocumentSubmissionsList.swift
+//  DocumentSubmissionsListView.swift
 //  JoyFill
 //
 //  Created by Vikash on 04/02/24.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct DocumentSubmissionsList: View {
+struct DocumentSubmissionsListView: View {
     var identifier: String
     var name: String
     
-    @ObservedObject var documentsViewModel = DocumentViewModel()
+    @ObservedObject var documentsViewModel = DocumentsViewModel()
     
     var body: some View {
         Group {
@@ -33,7 +33,7 @@ struct DocumentSubmissionsList: View {
                 
                 ForEach(documentsViewModel.submissions) { submission in
                     NavigationLink {
-                        DocumentForm(identifier: submission.identifier, userAccessToken: documentsViewModel.userAccessToken)
+                        FormView(identifier: submission.identifier, userAccessToken: documentsViewModel.userAccessToken)
                     } label: {
                         HStack {
                             Image(systemName: "doc")
@@ -50,5 +50,5 @@ struct DocumentSubmissionsList: View {
 }
 
 #Preview {
-    DocumentSubmissionsList(identifier: "sadfsedf efe  e erdocuments", name: "New Document")
+    DocumentSubmissionsListView(identifier: "sadfsedf efe  e erdocuments", name: "New Document")
 }

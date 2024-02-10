@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DocumentModel: Codable {
+struct Document: Codable {
     var _id: String
     var type: String
     var identifier: String
@@ -40,10 +40,10 @@ struct DocumentModel: Codable {
     }
 }
 
-extension DocumentModel: Identifiable {
+extension Document: Identifiable {
     var id: String { _id }
 }
 
 struct DocumentListResponse: Codable {
-    let data: [DocumentModel]
+    let data: [Document]
 }

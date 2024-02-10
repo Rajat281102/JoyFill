@@ -12,16 +12,16 @@
 		13EB612A2B7761EC009815DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EB61292B7761EC009815DE /* Preview Assets.xcassets */; };
 		13EB61372B777073009815DE /* JoyDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61362B777073009815DE /* JoyDoc.swift */; };
 		13EB61392B7770D6009815DE /* JSONNull .swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61382B7770D6009815DE /* JSONNull .swift */; };
-		13EB613E2B7773BC009815DE /* DocumentJoyDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613A2B7773BC009815DE /* DocumentJoyDoc.swift */; };
 		13EB613F2B7773BC009815DE /* DocumentForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613B2B7773BC009815DE /* DocumentForm.swift */; };
 		13EB61402B7773BC009815DE /* DocumentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613C2B7773BC009815DE /* DocumentListView.swift */; };
-		13EB61412B7773BC009815DE /* DocumentSubmissionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613D2B7773BC009815DE /* DocumentSubmissionsList.swift */; };
-		13EB61432B777431009815DE /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61422B777431009815DE /* DocumentViewModel.swift */; };
-		13EB61452B77743A009815DE /* JoyDocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61442B77743A009815DE /* JoyDocViewModel.swift */; };
+		13EB61412B7773BC009815DE /* DocumentSubmissionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */; };
 		13EB61472B77752D009815DE /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61462B77752D009815DE /* DocumentModel.swift */; };
 		13EB61492B77755B009815DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61482B77755B009815DE /* Constants.swift */; };
 		13EB614B2B777566009815DE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB614A2B777566009815DE /* API.swift */; };
 		13EB614E2B77759B009815DE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 13EB614D2B77759B009815DE /* SwiftyJSON */; };
+		13EB61502B777750009815DE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB614F2B777750009815DE /* ApiService.swift */; };
+		13EB61522B777773009815DE /* DocumentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61512B777772009815DE /* DocumentsViewModel.swift */; };
+		13EB61542B777780009815DE /* JoyDocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61532B777780009815DE /* JoyDocViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +31,15 @@
 		13EB61292B7761EC009815DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13EB61362B777073009815DE /* JoyDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyDoc.swift; sourceTree = "<group>"; };
 		13EB61382B7770D6009815DE /* JSONNull .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONNull .swift"; sourceTree = "<group>"; };
-		13EB613A2B7773BC009815DE /* DocumentJoyDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentJoyDoc.swift; sourceTree = "<group>"; };
 		13EB613B2B7773BC009815DE /* DocumentForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentForm.swift; sourceTree = "<group>"; };
 		13EB613C2B7773BC009815DE /* DocumentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentListView.swift; sourceTree = "<group>"; };
-		13EB613D2B7773BC009815DE /* DocumentSubmissionsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentSubmissionsList.swift; sourceTree = "<group>"; };
-		13EB61422B777431009815DE /* DocumentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
-		13EB61442B77743A009815DE /* JoyDocViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyDocViewModel.swift; sourceTree = "<group>"; };
+		13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentSubmissionsListView.swift; sourceTree = "<group>"; };
 		13EB61462B77752D009815DE /* DocumentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
 		13EB61482B77755B009815DE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		13EB614A2B777566009815DE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		13EB614F2B777750009815DE /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		13EB61512B777772009815DE /* DocumentsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsViewModel.swift; sourceTree = "<group>"; };
+		13EB61532B777780009815DE /* JoyDocViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoyDocViewModel.swift; path = ../Model/JoyDocViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +78,7 @@
 				13EB61332B77702A009815DE /* View */,
 				13EB61222B7761EA009815DE /* JoyFillApp.swift */,
 				13EB61382B7770D6009815DE /* JSONNull .swift */,
+				13EB614F2B777750009815DE /* ApiService.swift */,
 				13EB614A2B777566009815DE /* API.swift */,
 				13EB61482B77755B009815DE /* Constants.swift */,
 				13EB61262B7761EC009815DE /* Assets.xcassets */,
@@ -98,9 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				13EB613B2B7773BC009815DE /* DocumentForm.swift */,
-				13EB613A2B7773BC009815DE /* DocumentJoyDoc.swift */,
 				13EB613C2B7773BC009815DE /* DocumentListView.swift */,
-				13EB613D2B7773BC009815DE /* DocumentSubmissionsList.swift */,
+				13EB613D2B7773BC009815DE /* DocumentSubmissionsListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,8 +108,8 @@
 		13EB61342B777030009815DE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				13EB61422B777431009815DE /* DocumentViewModel.swift */,
-				13EB61442B77743A009815DE /* JoyDocViewModel.swift */,
+				13EB61532B777780009815DE /* JoyDocViewModel.swift */,
+				13EB61512B777772009815DE /* DocumentsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,13 +200,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EB613F2B7773BC009815DE /* DocumentForm.swift in Sources */,
-				13EB613E2B7773BC009815DE /* DocumentJoyDoc.swift in Sources */,
 				13EB61472B77752D009815DE /* DocumentModel.swift in Sources */,
-				13EB61452B77743A009815DE /* JoyDocViewModel.swift in Sources */,
-				13EB61432B777431009815DE /* DocumentViewModel.swift in Sources */,
-				13EB61412B7773BC009815DE /* DocumentSubmissionsList.swift in Sources */,
+				13EB61502B777750009815DE /* ApiService.swift in Sources */,
+				13EB61412B7773BC009815DE /* DocumentSubmissionsListView.swift in Sources */,
+				13EB61542B777780009815DE /* JoyDocViewModel.swift in Sources */,
 				13EB61232B7761EA009815DE /* JoyFillApp.swift in Sources */,
 				13EB614B2B777566009815DE /* API.swift in Sources */,
+				13EB61522B777773009815DE /* DocumentsViewModel.swift in Sources */,
 				13EB61372B777073009815DE /* JoyDoc.swift in Sources */,
 				13EB61392B7770D6009815DE /* JSONNull .swift in Sources */,
 				13EB61402B7773BC009815DE /* DocumentListView.swift in Sources */,
@@ -269,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -326,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
