@@ -11,6 +11,8 @@
 		13EB61252B7761EA009815DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61242B7761EA009815DE /* ContentView.swift */; };
 		13EB61272B7761EC009815DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EB61262B7761EC009815DE /* Assets.xcassets */; };
 		13EB612A2B7761EC009815DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13EB61292B7761EC009815DE /* Preview Assets.xcassets */; };
+		13EB61372B777073009815DE /* JoyDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61362B777073009815DE /* JoyDoc.swift */; };
+		13EB61392B7770D6009815DE /* JSONNull .swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB61382B7770D6009815DE /* JSONNull .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		13EB61242B7761EA009815DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13EB61262B7761EC009815DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EB61292B7761EC009815DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		13EB61362B777073009815DE /* JoyDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyDoc.swift; sourceTree = "<group>"; };
+		13EB61382B7770D6009815DE /* JSONNull .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONNull .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +55,11 @@
 		13EB61212B7761EA009815DE /* JoyFill */ = {
 			isa = PBXGroup;
 			children = (
+				13EB61352B777039009815DE /* Model */,
+				13EB61342B777030009815DE /* ViewModel */,
+				13EB61332B77702A009815DE /* View */,
 				13EB61222B7761EA009815DE /* JoyFillApp.swift */,
+				13EB61382B7770D6009815DE /* JSONNull .swift */,
 				13EB61242B7761EA009815DE /* ContentView.swift */,
 				13EB61262B7761EC009815DE /* Assets.xcassets */,
 				13EB61282B7761EC009815DE /* Preview Content */,
@@ -65,6 +73,28 @@
 				13EB61292B7761EC009815DE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		13EB61332B77702A009815DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13EB61342B777030009815DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13EB61352B777039009815DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13EB61362B777073009815DE /* JoyDoc.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +169,8 @@
 			files = (
 				13EB61252B7761EA009815DE /* ContentView.swift in Sources */,
 				13EB61232B7761EA009815DE /* JoyFillApp.swift in Sources */,
+				13EB61372B777073009815DE /* JoyDoc.swift in Sources */,
+				13EB61392B7770D6009815DE /* JSONNull .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
