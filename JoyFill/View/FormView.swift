@@ -23,7 +23,7 @@ struct FormView: View {
                         case FieldTypes.text:
                             DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
                         case FieldTypes.multiSelect:
-                            Text("")
+                            MultiSelectionView(options: ["Yes", "No", "N/A"])
                         case FieldTypes.dropdown:
                             DropdownView()
                         case FieldTypes.textarea:
@@ -31,7 +31,7 @@ struct FormView: View {
                         case FieldTypes.date:
                             DateTimeView()
                         case FieldTypes.signature:
-                            Text("")
+                            SignatureView(currentImageIndex: 0, startingImageIndex: 0)
                         case FieldTypes.block:
                             DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
                         case FieldTypes.number:

@@ -14,6 +14,7 @@ struct DocumentListView: View {
         NavigationView {
             VStack {
                 Text("Templates List")
+                    .font(.title.bold())
                 List {
                     ForEach(documentsViewModel.documents) { document in
                         NavigationLink {
