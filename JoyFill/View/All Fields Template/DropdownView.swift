@@ -15,20 +15,19 @@ struct DropdownView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Dropdown")
-            
-            Picker("Select", selection: $selectedPaymentMethod) {
-                Text("Yes").tag("Yes")
-                Text("No").tag("No")
-                Text("N/A").tag("N/A")
-            }
-            .padding(.trailing, screenHeight * 0.35)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray, lineWidth: 1)
-                    .frame(width: screenWidth * 0.92)
-                    
-            )
+                Picker("Select", selection: $selectedPaymentMethod) {
+                    Text("Yes").tag("Yes")
+                    Text("No").tag("No")
+                    Text("N/A").tag("N/A")
+                }
+                .frame(maxWidth: .infinity)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray, lineWidth: 1)
+                        .frame(maxWidth: .infinity)
+                )
         }
+        .padding(.horizontal, 16)
     }
 }
 

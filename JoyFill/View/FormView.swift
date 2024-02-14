@@ -13,7 +13,7 @@ struct FormView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 20.0) {
                 Text("Form View")
                     .font(.title.bold())
                 

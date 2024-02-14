@@ -19,41 +19,20 @@ struct DateTimeView: View {
         VStack(alignment: .leading) {
             Text("Date & Time")
             
-            Button(action: {
-                isDatePickerPresented.toggle()
-            }, label: {
-                    Text(formattedDate(selectedDate))
-                    .padding(.trailing, screenHeight * 0.24)
-                    .foregroundStyle(.black)
-                    .font(.title3)
-                    .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
-                            .frame(width: screenWidth * 0.92)
-                            
-                    )
-            })
-            .sheet(isPresented: $isDatePickerPresented, onDismiss: {
-                print("DatePicker dismissed")
-            }) {
-                DatePicker(
-                    "Select a date",
-                    selection: $selectedDate,
-                    in: Date()...,
-                    displayedComponents: [.date]
+            DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
+                .padding(.all, 10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.gray, lineWidth: 1)
+                        .frame(maxWidth: .infinity)
                 )
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .onChange(of: selectedDate) { _ in
-                    isDatePickerPresented = false
-                }
-            }
         }
+        .padding(.horizontal, 16)
     }
     
     func formattedDate(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .long
         return dateFormatter.string(from: date)
     }
 }

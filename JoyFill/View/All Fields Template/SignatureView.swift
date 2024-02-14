@@ -148,7 +148,7 @@ struct CanvasSignatureView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    
+//                    var image = UIImage(view: CanvasView(lines: $lines, num: $currentImageIndex))
                 }, label: {
                     Text("Save")
                 })
@@ -166,5 +166,34 @@ struct CanvasSignatureView: View {
 
 
 #Preview {
-    SignatureView(currentImageIndex: 0, startingImageIndex: 0)
+    CanvasSignatureView(currentImageIndex: Binding.constant(0), lines: Binding.constant([Line()]), num: Binding.constant(0))
 }
+
+
+// UIImage Extension
+//extension UIImage {
+//    func rotate(radians: CGFloat) -> UIImage {
+//        let rotatedSize = CGRect(origin: .zero, size: size)
+//            .applying(CGAffineTransform(rotationAngle: radians))
+//            .integral.size
+//        UIGraphicsBeginImageContext(rotatedSize)
+//        if let context = UIGraphicsGetCurrentContext() {
+//            let origin = CGPoint(x: rotatedSize.width / 2, y: rotatedSize.height / 2)
+//            context.translateBy(x: origin.x, y: origin.y)
+//            context.rotate(by: radians)
+//            draw(in: CGRect(x: -origin.y, y: -origin.x, width: size.width, height: size.height))
+//            let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
+//            UIGraphicsEndImageContext()
+//            return rotatedImage ?? self
+//        }
+//        return self
+//    }
+//    
+//    convenience init(view: any View) {
+//        UIGraphicsBeginImageContext(view.frame())
+//        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        self.init(cgImage: (image?.cgImage)!)
+//    }
+//}
