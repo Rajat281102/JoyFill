@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040A9C722B81F833003E08CE /* FetchDocument.json in Resources */ = {isa = PBXBuildFile; fileRef = 040A9C712B81F833003E08CE /* FetchDocument.json */; };
+		040A9C742B81FF6F003E08CE /* FetchDocument Submission.json in Resources */ = {isa = PBXBuildFile; fileRef = 040A9C732B81FF6F003E08CE /* FetchDocument Submission.json */; };
+		040A9C762B8204C7003E08CE /* RetriveDocument.json in Resources */ = {isa = PBXBuildFile; fileRef = 040A9C752B8204C7003E08CE /* RetriveDocument.json */; };
 		04AE60262B77B397001E7B82 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60252B77B397001E7B82 /* ImageView.swift */; };
 		04AE60282B77B7B0001E7B82 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60272B77B7B0001E7B82 /* TextView.swift */; };
 		04AE602A2B77B820001E7B82 /* MultiLineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE60292B77B820001E7B82 /* MultiLineTextView.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040A9C712B81F833003E08CE /* FetchDocument.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchDocument.json; sourceTree = "<group>"; };
+		040A9C732B81FF6F003E08CE /* FetchDocument Submission.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "FetchDocument Submission.json"; sourceTree = "<group>"; };
+		040A9C752B8204C7003E08CE /* RetriveDocument.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RetriveDocument.json; sourceTree = "<group>"; };
 		04AE60252B77B397001E7B82 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		04AE60272B77B7B0001E7B82 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		04AE60292B77B820001E7B82 /* MultiLineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLineTextView.swift; sourceTree = "<group>"; };
@@ -78,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040A9C702B81F621003E08CE /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				040A9C712B81F833003E08CE /* FetchDocument.json */,
+				040A9C752B8204C7003E08CE /* RetriveDocument.json */,
+				040A9C732B81FF6F003E08CE /* FetchDocument Submission.json */,
+				13EB614F2B777750009815DE /* ApiService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
 		04AE603B2B77BA94001E7B82 /* All Fields Template */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,12 +133,12 @@
 		13EB61212B7761EA009815DE /* JoyFill */ = {
 			isa = PBXGroup;
 			children = (
+				040A9C702B81F621003E08CE /* ApiService */,
 				13EB61352B777039009815DE /* Model */,
 				13EB61342B777030009815DE /* ViewModel */,
 				13EB61332B77702A009815DE /* View */,
 				13EB61222B7761EA009815DE /* JoyFillApp.swift */,
 				13EB61382B7770D6009815DE /* JSONNull .swift */,
-				13EB614F2B777750009815DE /* ApiService.swift */,
 				13EB614A2B777566009815DE /* API.swift */,
 				13EB61482B77755B009815DE /* Constants.swift */,
 				13EB61262B7761EC009815DE /* Assets.xcassets */,
@@ -231,8 +248,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040A9C722B81F833003E08CE /* FetchDocument.json in Resources */,
 				13EB612A2B7761EC009815DE /* Preview Assets.xcassets in Resources */,
+				040A9C742B81FF6F003E08CE /* FetchDocument Submission.json in Resources */,
 				13EB61272B7761EC009815DE /* Assets.xcassets in Resources */,
+				040A9C762B8204C7003E08CE /* RetriveDocument.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

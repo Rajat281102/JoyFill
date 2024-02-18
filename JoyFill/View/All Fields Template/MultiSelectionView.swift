@@ -10,12 +10,15 @@ import SwiftUI
 // Select multiple options
 
 struct MultiSelectionView: View {
-    var options: [String]
+    @State var options: [String]
     
     var body: some View {
-        VStack {
-            List(options, id: \.self) { option in
-                MultiSelection(option: option)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                ForEach(options, id: \.self) { option in
+                    MultiSelection(option: option)
+                        .padding(.horizontal)
+                }
             }
         }
     }
@@ -23,28 +26,22 @@ struct MultiSelectionView: View {
 
 struct MultiSelection: View {
     var option: String
+    @State var toggle: Bool = true
     var body: some View {
-        VStack {
+        Button(action: {
+            toggle.toggle()
+        }, label: {
+            
             HStack {
-                    Button(action: {
-                        
-                    }, label: {
-                        HStack {
-                            Image(systemName: "record.circle.fill")
-                            Text(option)
-                                .foregroundStyle(.black)
-                        }
-                        
-                    })
-                Spacer()
+                Image(systemName: toggle ? "record.circle.fill" : "record.circle")
+                Text(option)
+                    .foregroundStyle(.black)
             }
-        }
+            
+        })
     }
 }
 
 #Preview {
-    MultiSelectionView(options: [])
+    MultiSelectionView(options: ["Yes","NO"])
 }
-
-
-//                Image(systemName: "record.circle.fill")

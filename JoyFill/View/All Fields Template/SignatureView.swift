@@ -12,6 +12,8 @@ struct SignatureView: View {
     @State var startingImageIndex: Int
     @State var num: Int = 0
     @State private var lines: [Line] = []
+    @State var signatureImage: UIImage?
+    var signatureURL: String?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -20,6 +22,16 @@ struct SignatureView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray, lineWidth: 1)
                 .frame(height: 150)
+                .overlay(
+                    signatureImage != nil ?
+                    Image(uiImage: signatureImage!)
+                        .resizable()
+                        .scaledToFit()
+                    :
+                        Image("")
+                        .resizable()
+                        .scaledToFit()
+                )
             
             NavigationLink {
                 CanvasSignatureView(currentImageIndex: $currentImageIndex, lines: $lines, num: $num)
@@ -35,6 +47,17 @@ struct SignatureView: View {
                     )
             }
             .padding(.top, 10)
+        }
+        .onAppear{
+            JoyDocViewModel().loadImage(from: signatureURL ?? "") { image in
+                if let image = image {
+                    DispatchQueue.main.async {
+                        self.signatureImage = image
+                    }
+                } else {
+                    print("Failed to load image from URL: \(String(describing: signatureURL))")
+                }
+            }
         }
         .padding(.horizontal, 16)
     }
@@ -59,7 +82,6 @@ struct CanvasView: View {
                         path.addLines(line.points)
                         context.stroke(path, with: .color(line.color),style:StrokeStyle(lineWidth: line.lineWidth, lineCap: .round, lineJoin: .round))
                     }
-                    
                 }
                 .gesture(DragGesture(minimumDistance: 0,coordinateSpace: .local)
                     .onChanged({value in

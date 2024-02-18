@@ -16,7 +16,7 @@ struct FormView: View {
             VStack(spacing: 20.0) {
                 Text("Form View")
                     .font(.title.bold())
-                
+                MultiSelectionView(options: ["yes","no"])
                 if let fields = data?.fields  {
                     ForEach(fields) { joyDocField in
                         switch joyDocField.type {
@@ -31,7 +31,7 @@ struct FormView: View {
                         case FieldTypes.date:
                             DateTimeView()
                         case FieldTypes.signature:
-                            SignatureView(currentImageIndex: 0, startingImageIndex: 0)
+                            SignatureView(currentImageIndex: 0, startingImageIndex: 0,signatureURL: joyDocField.value?.signatureURL)
                         case FieldTypes.block:
                             DisplayTextView(displayText: joyDocField.value?.textabc ?? "")
                         case FieldTypes.number:
@@ -43,7 +43,7 @@ struct FormView: View {
                         case FieldTypes.table:
                             Text("")
                         case FieldTypes.image:
-                            ImageView()
+                            ImageView(imageURL: joyDocField.value?.url)
                         default:
                             Text("Data no Available")
                         }
@@ -77,7 +77,7 @@ struct FormView: View {
 }
 
 #Preview {
-    FormView(identifier: "dfdf")
+    MultiSelectionView(options: ["Yes", "No", "N/A"])
 }
 
 struct FieldTypes {
@@ -104,6 +104,21 @@ fileprivate extension ValueUnion {
             return nil
         }
     }
-    
+    var url: String? {
+        switch self {
+        case .valueElementArray(let valueElements):
+            return valueElements[0].url        
+        default:
+            return nil
+        }
+    }
+    var signatureURL: String? {
+        switch self {
+        case .string(let string):
+            return string
+        default:
+            return nil
+        }
+    }
 }
 

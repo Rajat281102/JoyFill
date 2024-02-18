@@ -10,13 +10,13 @@ import SwiftUI
 // Logo or Graphic
 
 struct ImageView: View {
+    var imageURL: String?
     @State var profileImage: UIImage?
     @State private var showImagePicker: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
             Text("Image")
-            
             
             Button(action: {
                     showImagePicker = true
@@ -34,6 +34,17 @@ struct ImageView: View {
                         .frame(height: 100)
                 }
             })
+            .onAppear{
+                JoyDocViewModel().loadImage(from: imageURL ?? "") { image in
+                    if let image = image {
+                        DispatchQueue.main.async {
+                            profileImage = image
+                        }
+                    } else {
+                        print("Failed to load image from URL: \(String(describing: imageURL))")
+                    }
+                }
+            }
             .padding(.horizontal, 16)
             
             NavigationLink(destination: ImagePickerView(selectedImage: $profileImage, isCamera: false), isActive: $showImagePicker) {

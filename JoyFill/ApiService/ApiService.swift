@@ -32,6 +32,7 @@ enum JoyfillAPI {
 
 class APIService {
     private let accessToken: String
+    var debugEnabled = true
     
     init(accessToken: String = Constants.userAccessToken) {
         self.accessToken = accessToken
@@ -54,8 +55,25 @@ class APIService {
     
     
     func fetchDocuments(completion: @escaping (Result<[Document], Error>) -> Void) {
+        if debugEnabled {
+            if let url = Bundle.main.url(forResource: "FetchDocument", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    let decoder = JSONDecoder()
+                    let documents = try! JSONDecoder().decode(DocumentListResponse.self, from: data)
+                    completion(.success(documents.data))
+                } catch {
+                    print("Error reading JSON file:", error)
+                }
+            } else {
+                print("File not found")
+            }
+            return
+        }
+        
         let request = urlRequest(type: .document())
         makeAPICall(with: request) { data, response, error in
+            
             if let data = data, error == nil {
                 do {
                     let documents = try JSONDecoder().decode(DocumentListResponse.self, from: data)
@@ -70,6 +88,22 @@ class APIService {
     }
     
     func fetchDocumentSubmissions(identifier: String, completion: @escaping (Result<[Document], Error>) -> Void) {
+        
+        if debugEnabled {
+            if let url = Bundle.main.url(forResource: "FetchDocument Submission", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    let decoder = JSONDecoder()
+                    let documents = try! JSONDecoder().decode(DocumentListResponse.self, from: data)
+                    completion(.success(documents.data))
+                } catch {
+                    print("Error reading JSON file:", error)
+                }
+            } else {
+                print("File not found")
+            }
+            return
+        }
                 
         let request = urlRequest(type: .template(identifier: identifier))
         makeAPICall(with: request) { data, response, error in
@@ -133,6 +167,19 @@ class APIService {
         }
     
     func fetchJoyDoc(identifier: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        if debugEnabled {
+            if let url = Bundle.main.url(forResource: "RetriveDocument", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    completion(.success(data))
+                } catch {
+                    print("Error reading JSON file:", error)
+                }
+            } else {
+                print("File not found")
+            }
+            return
+        }
         let request = urlRequest(type: .document(identifier: identifier))
         makeAPICall(with: request) { data, response, error in
             if let data = data, error == nil {

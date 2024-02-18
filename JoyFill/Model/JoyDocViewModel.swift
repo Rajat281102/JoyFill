@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import Combine
 
 class JoyDocViewModel: ObservableObject {
@@ -39,6 +40,27 @@ class JoyDocViewModel: ObservableObject {
                     }
                 }
             }
+    }
+    
+    func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+            
+            if let image = UIImage(data: data) {
+                completion(image)
+            } else {
+                completion(nil)
+            }
+        }
+        task.resume()
     }
         
     /* Async alternative to loading JoyDoc JSON
